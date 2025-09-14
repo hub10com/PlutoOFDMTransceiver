@@ -1,23 +1,23 @@
 # PlutoOFDMTransceiver  
 
-## 📖 About the Project  
-PlutoOFDMTransceiver is a prototype OFDM communication system based on **ADALM-Pluto SDR**.  
+## About the Project  
+PlutoOFDMTransceiver is a OFDM communication system based on **ADALM-Pluto SDR**.  
 - **Tx/Rx chains**  
-- **OFDM + QPSK/16-QAM modulation**  
+- **OFDM + BPSK/QPSK/16-QAM modulation**  
 - **Reed-Solomon error correction + Bitwrap processing**  
 - **FHSS-based jammer resistance**  
 - **PyQt5-based user interface**  
 - **Portable Radioconda environment for Windows**  
 
-This project was developed for the **2025 Teknofest Wireless Communication Competition**.  
+This project was developed for competition.  
 
 ---
 
-## 📂 Project Structure  
+## Project Structure  
 ```
 PlutoOFDMTransceiver/
 ├── controllers/       # Application controllers (Tx, Rx, FHSS etc.)
-├── doc/               # Documentation and reports
+├── doc/               # Documents
 ├── native/            # C/C++ based DLL/EXE sources
 ├── scripts/           # Pluto runner, jammer detection scripts
 ├── services/          # RS, Bitwrap services
@@ -31,23 +31,41 @@ PlutoOFDMTransceiver/
 
 ---
 
-## ⚡ Features  
-- ✅ SDR-based **OFDM communication**  
-- ✅ **Jammer detection** (Energy + GMM)  
-- ✅ **FHSS frequency hopping**  
-- ✅ **Reed-Solomon + CRC error correction**  
-- ✅ **Bitwrap** dummy data insertion/removal  
-- ✅ **PyQt5 GUI** for easy use  
-- ✅ **Portable Windows deployment** (Radioconda + Inno Setup)  
+## Features  
+- **SDR-based OFDM communication**  
+- **Jammer detection** (Energy + GMM)  
+- **FHSS frequency hopping**  
+- **Reed-Solomon + CRC error correction**  
+- **Bitwrap** dummy data insertion/removal  
+- **PyQt5 GUI** for easy use  
+- **Portable Windows deployment** (Radioconda)  
 
 ---
 
-## 🔧 Installation  
+## Screenshots
+
+### Main Interface  
+
+![Main](doc/main.png)
+
+### Transmitter Mode  
+
+![Tx Mode](doc/tx_mode.png)
+
+### Active Transmission  
+
+![Rx Mode](doc/rx_mode.png)
+
+### Receiver Mode  
+
+![Active Tx](doc/active_tx.png)
+
+## Installation  
 
 ### Requirements  
 - Windows 10/11  
-- ADALM-Pluto SDR (USB 2.0 connection)  
-- RF power amplifier (optional, for +8 dBm output)  
+- ADALM-Pluto SDR (USB 2.0 connection)
+- ADALM-Pluto SDR **Driver** (official Analog Devices driver)  
 - Python (portable Radioconda environment installed via `run_bootstrap.bat`)  
 
 ### Steps  
@@ -67,25 +85,26 @@ PlutoOFDMTransceiver/
 
 ---
 
-## ▶️ Usage  
+## Usage  
 - **Tx Mode**: File-based data transmission  
 - **Rx Mode**: Receiver with RS/Bitwrap decoding  
 - **FHSS Mode**: Frequency hopping under jammer conditions  
 - **GUI**: Parameters for modulation, bandwidth, power, file selection  
 
 ---
+> **Important Note:**  
+> The FHSS system implemented in this project was specifically designed for the competition environment.  
+> Reproducing the same functionality may not be feasible unless the exact hardware, conditions, and configurations are replicated.
 
-## 📊 Test Results  
+## Test Results  
 - 1m lab test and 15m open-field test  
 - Comparison between 2 MHz and 3 MHz bandwidths  
 - QPSK vs 16-QAM BER analysis  
 - FHSS response time under jammer conditions  
 
-(See the `doc/` folder for more details.)  
-
 ---
 
-## 🚀 Future Work  
+## Future Work  
 - FPGA acceleration  
 - MIMO antenna support  
 - AI-based jammer detection  
@@ -93,5 +112,5 @@ PlutoOFDMTransceiver/
 
 ---
 
-## 📜 License  
+## License  
 This project is licensed under **GPL-3.0**.  
