@@ -107,7 +107,6 @@ PlutoOFDMTransceiver/
 ## Future Work  
 - FPGA acceleration  
 - MIMO antenna support  
-- AI-based jammer detection  
 - More advanced GUI and KPI dashboards  
 
 ---
