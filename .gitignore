@@ -1,0 +1,36 @@
+# ---- Portable ortam / cache
+/python/
+.env/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ---- IDE / build
+.qtcreator/
+*.user
+*.pro.user
+dist/
+build/
+.DS_Store
+Thumbs.db
+
+# ---- Varsayılan: exe/dll girmez
+*.exe
+*.dll
+*.so
+*.o
+*.lib
+*.pdb
+*.log
+
+# ---- BEYAZ LİSTE: Senin derlediklerin (scripts/)
+!scripts/jammer_detect.exe
+!scripts/pluto_udp_cmdd_bridge.exe
+!scripts/udp_dump+.exe
+
+# ---- BEYAZ LİSTE: Senin derlediklerin (services/)
+!services/bitwrap.dll
+!services/bitunwrap.dll
+!services/rs_container.dll

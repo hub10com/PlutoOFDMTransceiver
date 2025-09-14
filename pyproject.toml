@@ -1,0 +1,31 @@
+[project]
+name = "PlutoOFDMTranciever"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[tool.pyside6-project]
+files = [
+  "controllers/rx_controller.py",
+  "controllers/tx_controller.py",
+  "controllers/tx_fhss_controller.py",
+  "controllers/rx_fhss_controller.py",
+  "main.py",
+  "paths.py",
+  "run.bat",
+  "scripts/tx_runner.py",
+  "scripts/rx_runner.py",
+  "scripts/udp_runner.py",
+  "scripts/pluto_cmdd_runner.py",
+  "scripts/jammer_detection_runner.py",
+  "services/bitwrap.py",
+  "services/bitunwrap.py",
+  "services/ofdm_tx_subproc.py",
+  "services/ofdm_tx_inproc.py",
+  "services/rs_container.py",
+  "ui/style.py",
+  "ui/views/main_window.py",
+  "ui/views/rx_view.py",
+  "ui/views/tx_view.py",
+  "ui/views/tx_fhss_view.py",
+  "ui/views/rx_fhss_view.py",
+]
